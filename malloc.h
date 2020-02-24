@@ -5,9 +5,9 @@
 
 struct chunk {
   struct chunk *next, *prev;
-  size_t        size;
-  long          free;
-  void         *data;
+  size_t        size; // size of the data stored.
+  long          free; // free <= 0 if not free.
+  void         *data; // pointer to where the actual data of the pointer is stocked.
 };
 
 void zerofill(void *ptr, size_t len);
